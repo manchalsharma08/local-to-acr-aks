@@ -11,9 +11,12 @@ $imageName = "manchalsharma08/my-applicationnew"
 $tag = "v4"
 $fullImageName = "${imageName}:${tag}"
 
-# Build Docker image
+# Path to app folder where Dockerfile and app code exist
+$appFolder = "..\app"
+
+# Build Docker image (from app directory)
 Write-Host "🔨 Building Docker image: $fullImageName"
-docker build -t $fullImageName .
+docker build -t $fullImageName $appFolder
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "❌ Docker build failed. Exiting script."
