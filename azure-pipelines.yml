@@ -1,0 +1,8 @@
+tigger: none 
+pool: default
+
+jobs:
+- job: buildpush
+  steps:
+   
+ 
