@@ -22,3 +22,7 @@ az acr build `
   --image $imageFullName `
   --file $dockerfilePath `
   $contextPath
+
+
+ 
+
